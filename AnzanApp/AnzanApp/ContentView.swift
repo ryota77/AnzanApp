@@ -58,7 +58,7 @@ struct ContentView: View {
                     // 文字サイズを大
                         .font(.largeTitle)
                         .foregroundColor(.white)
-                    TextField("答えは？", text: $answerNumber)
+                    TextField("答えは何ですか？", text: $answerNumber)
                     //　TextFiledのスタイルを指定
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     //　キーボードをテンキーにする
