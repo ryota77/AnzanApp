@@ -15,9 +15,10 @@ struct AnswerView: View {
     /// TextFieldで入力した内容をInt型に変換した値
     let answerNumber: Double
     //　計算した結果
-    @State private var calculationNumber = 0
+    @State private var calculationNumber = 0.00
     /// 結果を格納する変数
     @State private var resultMessage: String = ""
+    private let soundPlayer = SoundPlayer()
     var operatorModel: Operator
     var body: some View {
         ZStack {
@@ -28,11 +29,14 @@ struct AnswerView: View {
                 .aspectRatio(contentMode: .fit)
             VStack {
                 // 出題内容とその入力結果を表示
-                Text("\(numberLeft) \(operatorModel.rawValue) \(numberRight) = \(answerNumber)")
+                Text(String(format: "%.0f",numberLeft)
+                     + "\(operatorModel.rawValue)"
+                     + String(format: "%.0f",numberRight)
+                     + "=\(String(format: "%.2f",answerNumber))")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                 //　答えを表示
-                Text("答えは \(calculationNumber)")
+                Text("答えは \(String(format: "%.2f",calculationNumber))")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                 // 結果を表示
@@ -45,9 +49,11 @@ struct AnswerView: View {
             let result = operatorModel.checkAnswer(numberLeft: numberLeft, numberRight: numberRight, answerNumber: answerNumber)
             if result.flag {
                 resultMessage = "大正解!"
+                soundPlayer.correctPlay()
             } else {
                 resultMessage = "不正解"
             }
+            calculationNumber = result.correct
         }
     }
 }

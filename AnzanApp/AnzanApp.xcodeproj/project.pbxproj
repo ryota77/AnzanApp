@@ -12,6 +12,7 @@
 		63621E4D286F04D600F8265A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63621E4C286F04D600F8265A /* ContentView.swift */; };
 		63621E4F286F04D700F8265A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63621E4E286F04D700F8265A /* Assets.xcassets */; };
 		63621E52286F04D700F8265A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63621E51286F04D700F8265A /* Preview Assets.xcassets */; };
+		6388E0D9291288AC00A6834E /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6388E0D8291288AC00A6834E /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		63621E4C286F04D600F8265A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63621E4E286F04D700F8265A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63621E51286F04D700F8265A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6388E0D8291288AC00A6834E /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				63621E4A286F04D600F8265A /* AnzanAppApp.swift */,
 				63621E4C286F04D600F8265A /* ContentView.swift */,
 				635D5CCA287D863F00FC87CB /* AnswerView.swift */,
+				6388E0D8291288AC00A6834E /* SoundPlayer.swift */,
 				63621E4E286F04D700F8265A /* Assets.xcassets */,
 				63621E50286F04D700F8265A /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				63621E4D286F04D600F8265A /* ContentView.swift in Sources */,
 				63621E4B286F04D600F8265A /* AnzanAppApp.swift in Sources */,
+				6388E0D9291288AC00A6834E /* SoundPlayer.swift in Sources */,
 				635D5CCB287D863F00FC87CB /* AnswerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

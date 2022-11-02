@@ -36,15 +36,15 @@ enum Operator: String, CaseIterable {
 }
 struct ContentView: View {
     ///　足し算の左辺の値を格納する
-    @State private var numberLeft = 0.0
+    @State private var numberLeft = 0.00
     /// 足し算の右辺の値を格納する
-    @State private var numberRight = 0.0
+    @State private var numberRight = 0.00
     /// TextFieldで入力した内容を格納する
     @State private var answerNumber: String = ""
     ///答え画面(AnswerView)の表示管理をするフラグ
     @State private var isShowAnswerView = false
     /// TextFieldで入力した内容をInt型に変換した値を格納する
-    @State private var inputNumber = 0.0
+    @State private var inputNumber = 0.00
     @State private var operatorModel = Operator.plus
     var body: some View {
         ZStack {
@@ -54,7 +54,10 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
             VStack {
                 HStack {
-                    Text("\(numberLeft) \(operatorModel.rawValue)  \(numberRight) =")
+                    Text(String(format: "%.0f", numberLeft)
+                        + "\(operatorModel.rawValue) "
+                        + String(format: "%.0f",numberRight)
+                        + "=")
                     // 文字サイズを大
                         .font(.largeTitle)
                         .foregroundColor(.white)
