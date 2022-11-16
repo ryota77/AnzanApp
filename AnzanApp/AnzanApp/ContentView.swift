@@ -22,7 +22,7 @@ enum Operator: String, CaseIterable {
         case .division: calculationNumber = numberLeft / numberRight
         }
         
-        calculationNumber = floor(calculationNumber * 10) / 10
+        calculationNumber = floor(calculationNumber * 100) / 100
         if calculationNumber == answerNumber {
             isCorrect = true
         }

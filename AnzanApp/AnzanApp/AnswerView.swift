@@ -52,6 +52,7 @@ struct AnswerView: View {
                 soundPlayer.correctPlay()
             } else {
                 resultMessage = "不正解"
+                soundPlayer.incorrectPlay()
             }
             calculationNumber = result.correct
         }
